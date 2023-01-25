@@ -1,0 +1,205 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    min-width: 100%;
+    min-height: 100vh;
+    background: url("https://assets.codepen.io/6060109/ZigZag.png");
+    background-size: cover;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h2,
+h5 {
+    color: #2f463d;
+}
+
+h2,
+h5,
+h6,
+a,
+button {
+    font-family: Montserrat;
+}
+
+.panel {
+    width: 350px;
+    height: 630px;
+    margin: 50px 0;
+    background-color: #ffffff;
+    box-shadow: 0px 40px 40px -20px #3c7b61;
+    border-radius: 5px;
+    position: relative;
+    flex-shrink: 0;
+}
+
+.confirmation {
+    z-index: 1;
+}
+
+.choise,
+.order {
+    display: none;
+    height: 590px;
+}
+
+.choise {
+    margin-right: -20px;
+}
+
+.order {
+    margin-left: -20px;
+}
+
+.inner-container {
+    width: 100%;
+    text-align: center;
+    padding: 55px 45px;
+}
+
+.inner-container>img {
+    width: 50%;
+}
+
+.inner-container>h2 {
+    margin: 20px 0 15px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 22px;
+    height: 50px;
+}
+
+.inner-container>p {
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 26px;
+    color: #828282;
+}
+
+.food-selection {
+    display: flex;
+    align-items: center;
+    background-color: #f0fff5;
+    border-radius: 5px;
+    margin: 40px 0 30px;
+}
+
+.food-name-price {
+    width: 50%;
+    text-align: left;
+    padding-left: 15px;
+}
+
+.food-name-price h5 {
+    font-weight: 800;
+    font-size: 14px;
+    margin-bottom: 3px;
+}
+
+.food-name-price h6 {
+    color: #7a8f85;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.food-selection a {
+    color: #467a66;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.dots-container {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    position: absolute;
+    bottom: 5%;
+}
+
+.dot {
+    height: 7px;
+    width: 7px;
+    background-color: #e0e0e0;
+    border-radius: 100%;
+    margin: 0 8px;
+}
+
+.dots-confirmation>.dot:nth-of-type(2) {
+    background-color: #67bd99;
+}
+
+.all-btn {
+    color: #ffffff;
+    border-radius: 5px;
+    height: 50px;
+    width: 100%;
+    padding: 15px 0;
+    font-weight: 800;
+    font-size: 15px;
+    border: none;
+    transition: 0.3s ease all;
+}
+
+.inactive-btn {
+    background-color: #bdbdbd;
+    box-shadow: 0px 20px 20px rgba(167, 167, 167, 0.2);
+    position: absolute;
+    bottom: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 75%;
+}
+
+.close-button {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+
+#ready-btn {
+    background-color: #67bd99;
+    box-shadow: 0px 20px 20px rgba(103, 189, 153, 0.2);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+#ready-btn:hover {
+    opacity: 0.8;
+    transition: 0.3s ease all;
+    cursor: pointer;
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 992px) {
+
+    .choise,
+    .order {
+        display: block;
+    }
+
+    .dots-choise>.dot:nth-of-type(1) {
+        background-color: #67bd99;
+    }
+
+    .dots-confirmation>.dot:nth-of-type(2) {
+        background-color: #67bd99;
+    }
+
+    .dots-order>.dot:nth-of-type(3) {
+        background-color: #67bd99;
+    }
+}
